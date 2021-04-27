@@ -21,7 +21,9 @@ workflows:
   version: 2
   plan_approve_apply:
     jobs:
-      - plan-apply
+      - plan-apply:
+          context:
+            - dummy
       # - hold-apply:
       #     type: approval
       #     requires:
